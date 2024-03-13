@@ -39,6 +39,7 @@ public class Task1Week5 {
         DragAndDrop(fiveHundredButton2, draglocation4);
         WebElement perfectText = driver.findElement(By.xpath("//a[@class='button button-green' and text()='Perfect!']"));
         assertTrue("Perfect text is not visible.", perfectText.isDisplayed());
+        driver.quit();
     }
     public void DragAndDrop(WebElement source, WebElement target){
         Actions actions = new Actions(driver);
