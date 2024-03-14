@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
+import java.lang.annotation.Annotation;
+
 import static org.junit.Assert.assertTrue;
 
 /*
@@ -16,13 +18,10 @@ Drag and drop the 5000 button to the Amount section in DEBIT SIDE
 Drag and drop the second 5000 button to the Amount section in CREDIT SIDE
 Verify the visibility of Perfect text.
 */
-public class Task1Week5 {
-    WebDriver driver;
+public class Task1Week5 extends Tests {
+
     @Test
     public void task1(){
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("start-maximized");
-        driver = new ChromeDriver(chromeOptions);
         String url= "http://demo.guru99.com/test/drag_drop.html";
         driver.navigate().to(url);
         WebElement BankButton = driver.findElement(By.xpath("//a[@class='button button-orange' and text()=' BANK ']"));
@@ -39,10 +38,10 @@ public class Task1Week5 {
         DragAndDrop(fiveHundredButton2, draglocation4);
         WebElement perfectText = driver.findElement(By.xpath("//a[@class='button button-green' and text()='Perfect!']"));
         assertTrue("Perfect text is not visible.", perfectText.isDisplayed());
-        driver.quit();
     }
     public void DragAndDrop(WebElement source, WebElement target){
         Actions actions = new Actions(driver);
         actions.dragAndDrop(source,target).build().perform();
     }
+
 }
