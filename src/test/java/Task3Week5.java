@@ -18,7 +18,7 @@ import java.time.Duration;
 */
 public class Task3Week5 extends Tests{
     @Test
-    public void task1() throws AWTException, InterruptedException {
+    public void task1() throws AWTException{
         String url = "https://www.ebay.com/";
         driver.navigate().to(url);
 
