@@ -15,6 +15,11 @@
             </class>
         </classes>
     </test>
-
-
+    <test name="Edge Test">
+        <parameter name="target-browser" value="edge"/>
+        <classes>
+            <class name="Task2Week6Test">
+            </class>
+        </classes>
+    </test>
 </suite>
