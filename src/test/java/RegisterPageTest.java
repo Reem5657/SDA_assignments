@@ -42,7 +42,6 @@ public class RegisterPageTest extends Tests {
         confirmPasswordField.sendKeys(confirmPass);
         return this;
     }
-
     public RegisterPageTest subscribe(int choice){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
