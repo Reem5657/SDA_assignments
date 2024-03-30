@@ -7,6 +7,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class Task1Week7Test extends Tests {
 @Test
         public  void testMethod() {
